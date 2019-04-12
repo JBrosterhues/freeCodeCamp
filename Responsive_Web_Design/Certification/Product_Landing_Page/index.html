@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Product Landing Page</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #header {
+                height: 50px;
+                margin-top: 50px;
+                width: 100vw;
+            }
+            #header-img {
+                float: left;
+                height: 50px;
+                width: 50px;
+            }
+            #logo-text {
+                float: left;
+                vertical-align: middle;
+            }
+            #nav-bar {
+                background-color: rgba(100, 100, 255, 0.35);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 50px;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .nav-link {
+                margin-right: 50px;
+                padding-left: 30px;
+            }
+            #submit {
+                background-color: green;
+                border: none;
+                border-radius: 15px;
+                color: white;
+                height: 2em;
+                margin-top: 10px;
+                width: 10em;
+            }
+            #main-block {
+                margin-top: 50px;
+                text-align: center;
+                width: 100vw;
+            }
+            #video-block {
+                margin: 100px;
+            }
+            #features {
+                margin: 50px;
+            }
+            #articles {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 0px;
+            }
+            .article-box {
+                border-color: blue;
+                border-style: solid;
+                border-width: 3px;
+                width: 30vw;
+            }
+            .article-name {
+                background-color: wheat;
+                height: 2em;
+                margin-top: 0px;
+                padding: 1em;
+            }
+            .article-price {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            .buy-button {
+                background-color: green;
+                border: none;
+                border-radius: 15px;
+                color: white;
+                height: 3em;
+                margin: 10px;
+                width: 10em;
+            }
+            #copyright {
+                float: right;
+                margin-right: 50px;
+            }
+            @media (max-width: 640px) {
+                #video-block {
+                    width: 360px;
+                }
+            }
+        </style>
+
+        <header id="header">
+            <div id="logoblock">
+                <img
+                    id="header-img"
+                    src="http://upload.wikimedia.org/wikipedia/commons/5/5d/Ikona_przewijak.png"
+                    alt="Diaper company logo"
+                />
+                <p id="logo-text">Diaper Corp</p>
+            </div>
+            <nav id="nav-bar">
+                <a href="#video" class="nav-link">Video</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#articles" class="nav-link">Articles</a>
+            </nav>
+        </header>
+        <main>
+            <div id="main-block">
+                <h1 id="header-line">The World's Most Famous Diapers</h1>
+                <form
+                    id="form"
+                    action="https://www.freecodecamp.com/email-submit"
+                >
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email address"
+                        required
+                    />
+                    <input id="submit" type="submit" value="Get Started" />
+                </form>
+                <section id="video-block">
+                    <iframe
+                        id="video"
+                        height="446"
+                        width="793"
+                        src="https://www.youtube.com/embed/9Ox5Hv-0fhA"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </section>
+                <section id="features">
+                    <h2>Our Promise</h2>
+                    <h3>Cosy and comfortable</h3>
+                    <h3>Keeps your baby safe and dry</h3>
+                    <h3>Perfect hygiene and health protection</h3>
+                </section>
+                <section id="articles">
+                    <div class="article-box">
+                        <h3 class="article-name">Thick & Thursty</h3>
+                        <p class="article-price">$34.99</p>
+                        <p class="article-text">
+                            Takes up a lot of stuff.
+                        </p>
+                        <p class="article-spec">
+                            104 diapers, weight up to 10lbs.
+                        </p>
+                        <button id="tat-button" class="buy-button">
+                            Select
+                        </button>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-name">Soft & Strong</h3>
+                        <p class="article-price">$22.99</p>
+                        <p class="article-text">
+                            This is the extra strong option.
+                        </p>
+                        <p class="article-spec">
+                            44 diapers, weight up to 14lbs.
+                        </p>
+                        <button id="sas-button" class="buy-button">
+                            Select
+                        </button>
+                    </div>
+                    <div class="article-box">
+                        <h3 class="article-name">Light & Air</h3>
+                        <p class="article-price">$61.99</p>
+                        <p class="article-text">
+                            Your baby will feel like hovering on clouds.
+                        </p>
+                        <p class="article-spec">
+                            144 diapers, weight up to 28.
+                        </p>
+                        <button id="laa-button" class="buy-button">
+                            Select
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p id="copyright">Copyright 2019, Diaper Corp</p>
+        </footer>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
