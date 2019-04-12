@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: #a9d7d1;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            main {
+                background-color: #fafafa;
+                margin: auto;
+                width: 50vw;
+            }
+            .labels {
+                display: inline-block;
+                margin: 5px;
+                vertical-align: top;
+                text-align: right;
+                width: 50%;
+            }
+            .rightcol {
+                display: inline-block;
+                margin: 5px;
+                vertical-align: middle;
+                width: 40%;
+            }
+            .rowblock {
+                margin: 5px;
+            }
+            #submitblock {
+                margin: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+            #submit {
+                background-color: blue;
+                border: none;
+                border-radius: 15px;
+                box-shadow: none;
+                color: white;
+                height: 2em;
+                text-align: center;
+                width: 8em;
+            }
+            #title {
+                text-align: center;
+            }
+            #description {
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+
+        <header>
+            <h1 id="title">Survey Form</h1>
+        </header>
+        <main>
+            <div id="descblock">
+                <p id="description">
+                    Let us know how we can improve freeCodeCamp
+                </p>
+            </div>
+            <form id="survey-form">
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="name-label">
+                            * Name:
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <input
+                            id="name"
+                            type="text"
+                            required
+                            placeholder="Enter your name"
+                        />
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="email-label">
+                            * Email:
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <input
+                            id="email"
+                            type="email"
+                            required
+                            placeholder="Enter your email"
+                        />
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="number-label">
+                            * Age:
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <input
+                            id="number"
+                            type="number"
+                            min="1"
+                            max="150"
+                            required
+                            placeholder="Age"
+                        />
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="role-label">
+                            Which option best describes your current role?
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <select id="dropdown" placeholder="Select an option">
+                            <option value="Student">Student</option>
+                            <option value="Full-time Job">Full-time Job</option>
+                            <option value="Full-time Learner"
+                                >Full-time Learner</option
+                            >
+                            <option value="Prefer not to say"
+                                >Prefer not to say</option
+                            >
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="recommend-label">
+                            * How likely is that you would recommend
+                            freeCodeCamp to a friend?
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <div id="recommend-block">
+                            <input
+                                type="radio"
+                                id="definitely"
+                                name="recommend"
+                                value="definitely"
+                                checked
+                            />
+                            <label for="definitely">Definitely</label>
+                            <br />
+
+                            <input
+                                type="radio"
+                                id="maybe"
+                                name="recommend"
+                                value="maybe"
+                            />
+                            <label for="maybe">Maybe</label>
+                            <br />
+
+                            <input
+                                type="radio"
+                                id="notsure"
+                                name="recommend"
+                                value="notsure"
+                            />
+                            <label for="notsure">Not sure</label>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="like-label">
+                            What do you like most in FCC?
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <select
+                            id="like-dropdown"
+                            placeholder="Select an option"
+                        >
+                            <option value="Challenges">Challenges</option>
+                            <option value="Projects">Projects</option>
+                            <option value="Community">Community</option>
+                            <option value="Open source">Open source</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="improve-label">
+                            Things that should be improved in the future (Check
+                            all that apply):
+                        </label>
+                    </div>
+                    <div class="rightcol">
+                        <input
+                            type="checkbox"
+                            name="improvements"
+                            value="front-end"
+                        />Front-end Projects<br />
+                        <input
+                            type="checkbox"
+                            name="improvements"
+                            value="back-end"
+                        />Back-end Projects<br />
+                        <input
+                            type="checkbox"
+                            name="improvements"
+                            value="data-viz"
+                        />Data Visualization<br />
+                        <input
+                            type="checkbox"
+                            name="improvements"
+                            value="challenges"
+                        />Challenges<br />
+                    </div>
+                </div>
+                <div class="rowblock">
+                    <div class="labels">
+                        <label id="comment-label">
+                            Any Comments or Suggestions?
+                        </label>
+                    </div>
+                    <textarea id="comment" rows="4" columns="50"></textarea>
+                </div>
+                <div id="submitblock">
+                    <button id="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
