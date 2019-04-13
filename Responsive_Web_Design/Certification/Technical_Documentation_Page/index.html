@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Technical Documentation</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0 0 0 0;
+            }
+            #body-all {
+                display: flex;
+                flex-direction: row;
+            }
+            #navbar {
+                border-color: black;
+                border-style: solid;
+                border-width: 0 2px 0 0;
+                margin: 0 20px 0 0;
+            }
+            #navbar-header {
+                padding: 0 10px 0 10px;
+            }
+            #nav-link-all {
+                display: flex;
+                flex-direction: column;
+            }
+            #nav-link-all a {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px 0 0 0;
+                font-size: 1.5em;
+                margin: 0 0 0 0;
+                padding: 2px 10px 2px 10px;
+                text-decoration: none;
+            }
+            #html-history li {
+                padding: 1em 0 0 0;
+            }
+            .code-example {
+                margin: 30px 0 30px 0;
+            }
+            code {
+                background-color: beige;
+                margin: 0 10px 0 10px;
+                padding: 10px 10px 10px 10px;
+                width: 80vw;
+                vertical-align: middle;
+            }
+            @media (max-width: 640px) {
+                #navbar {
+                    display: none;
+                }
+            }
+        </style>
+        <div id="body-all">
+            <nav id="navbar">
+                <header id="navbar-header">
+                    <h2>HTML Documentation</h2>
+                </header>
+                <div id="nav-link-all">
+                    <a class="nav-link" href="#Introduction">Introduction</a>
+                    <a class="nav-link" href="#HTML_context">HTML context</a>
+                    <a class="nav-link" href="#Document_structuring"
+                        >Document structuring</a
+                    >
+                    <a class="nav-link" href="#Layout_considerations"
+                        >Layout considerations</a
+                    >
+                    <a class="nav-link" href="#JavaScript">JavaScript</a>
+                </div>
+            </nav>
+            <main id="main-doc">
+                <section id="Introduction" class="main-section">
+                    <header>
+                        <h2>Introduction</h2>
+                    </header>
+                    <p>
+                        Hypertext Markup Language (HTML) is a standard markup
+                        language that is typically used to create web pages. At
+                        least web pages are the main usage for HTML.
+                    </p>
+                    <p>
+                        HTML provides the (semantic) structure of a "document",
+                        the layout is typically done using corresonding
+                        Cascading Style Sheets (CSS).
+                    </p>
+                    <p>
+                        Web browsers read and process HTML to generate web
+                        pages.
+                    </p>
+                </section>
+                <section id="HTML_context" class="main-section">
+                    <header>
+                        <h2>HTML context</h2>
+                    </header>
+                    <p>
+                        The first version of HTML was specified by Tim
+                        Berners-Lee in 1990, one year after he had proposed an
+                        Internet-based hypertext system.
+                    </p>
+                    <p>
+                        The HTML specification became publicly available in
+                        1991.
+                    </p>
+                    <p>
+                        In the meantime HTML has undergone several major
+                        revisions. The following list shows major milestones of
+                        the HTML development.
+                    </p>
+                    <ul id="html-history">
+                        <li>
+                            <strong>November 24, 1995</strong>: HTML 2.0 was
+                            published.
+                        </li>
+                        <li>
+                            <strong>January 14, 1997</strong>: HTML 3.2 was
+                            published.
+                        </li>
+                        <li>
+                            <strong>December 18, 1997</strong>: HTML 4.0 was
+                            published.
+                        </li>
+                        <li>
+                            <strong>October 28, 2014</strong>: HTML5 was
+                            published.
+                        </li>
+                        <li>
+                            <strong>December 14, 2017</strong>: HTML 5.2 was
+                            published.
+                        </li>
+                    </ul>
+                </section>
+                <section id="Document_structuring" class="main-section">
+                    <header>
+                        <h2>Document structuring</h2>
+                    </header>
+                    <p>
+                        HTML uses several different tags for document
+                        structuring. The following list shows some examples.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>&lt;h1&gt;</strong>: used for main heading.
+                            There should be only one <i>h1</i> tag per web page.
+                            There are further heading tags named <i>h2</i> to
+                            <i>h6</i>.
+                        </li>
+                        <li>
+                            <strong>&lt;p&gt;</strong>: used for paragraphs in a
+                            document.
+                        </li>
+                        <li>
+                            <strong>&lt;img&gt;</strong>: used to embed images
+                            in a document.
+                        </li>
+                        <li>
+                            <strong>&lt;div&gt;</strong>: used to structure
+                            blocks in a document. <i>&lt;div&gt;</i> tags don't
+                            get displayed.
+                        </li>
+                    </ul>
+                </section>
+                <section id="Layout_considerations" class="main-section">
+                    <header>
+                        <h2>Layout considerations</h2>
+                    </header>
+                    <p>
+                        When working with CSS, the respective CSS code can be
+                        put at different places:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Embedded in an HTML tag</strong>: this might
+                            make sense in specific cases, yet in most cases
+                            maintainability will be reduced by this approach.
+                        </li>
+                        <li>
+                            <strong
+                                >Embedded in &lt;style&gt; section in an HTML
+                                document</strong
+                            >: preferred over tag-based usage of CSS. Could be
+                            used to keep a single file with all document-related
+                            content.
+                        </li>
+                        <li>
+                            <strong>Included in a separate .css file</strong>:
+                            in this case the external file gets referenced in
+                            the HTML document and document structure and layout
+                            are maintained separately. This is the preferred
+                            approach that is also leveraged by 3rd-party tools,
+                            i.e. as several context-specific .css files can be
+                            used.
+                        </li>
+                    </ul>
+                </section>
+                <section id="JavaScript" class="main-section">
+                    <header>
+                        <h2>JavaScript</h2>
+                    </header>
+                    <p>
+                        When an HTML document is loaded into the browser, a
+                        so-called Document Object Model (DOM) is being created
+                        that contains the document structure and context in a
+                        tree-based data structure.
+                    </p>
+                    <p>
+                        When JavaScript is used in the browser the above
+                        mentioned DOM is being used to query and change the HTML
+                        document &ndash; and thus the web page content.
+                    </p>
+                    <p>
+                        Following are a couple of JavaScript code samples that
+                        show the interaction with the DOM.
+                    </p>
+                    <div class="code-example">
+                        <code>document.getElementById("HTML id")</code>
+                        <p>
+                            Get the element with the corresponding
+                            <i>id</i> attribute.
+                        </p>
+                    </div>
+                    <div class="code-example">
+                        <code
+                            >document.getElementsByClassName("HTML class")</code
+                        >
+                        <p>
+                            Get all elements with the corresponding
+                            <i>class</i> attribute.
+                        </p>
+                    </div>
+                    <div class="code-example">
+                        <code
+                            ><i>element</i>.addEventListener("Event
+                            specification")</code
+                        >
+                        <p>
+                            Adds an event to the specified element.
+                        </p>
+                    </div>
+                    <div class="code-example">
+                        <code><i>element</i>.appendChild("Child element")</code>
+                        <p>
+                            Append <i>Child element</i> to the specified
+                            element.
+                        </p>
+                    </div>
+                    <div class="code-example">
+                        <code><i>element</i>.children</code>
+                        <p>
+                            Returns a collection of the element's child
+                            elements.
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>
